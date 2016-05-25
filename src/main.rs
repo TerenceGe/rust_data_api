@@ -91,9 +91,5 @@ fn main() {
     let mut router = Router::new();
     router.get("/ticker", move |r: &mut Request| fetch_ticker(r));
 
-    let mut chain = Chain::new(router);
-    chain.link_before(ResponseTime);
-    chain.link_after(ResponseTime);
-
-    Iron::new(chain).http("localhost:3001").unwrap();
+    Iron::new(router).http("localhost:3001").unwrap();
 }
