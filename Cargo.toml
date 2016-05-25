@@ -1,0 +1,13 @@
+[package]
+name = "data_api"
+version = "0.1.0"
+authors = ["terence.ge <terence.ge@btcchina.com>"]
+
+[dependencies]
+iron = "*"
+redis = "*"
+time = "*"
+router = "*"
+hyper = "*"
+rustc-serialize = "*"
+params = "*"
